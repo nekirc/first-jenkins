@@ -6,7 +6,7 @@ pipeline {
     agent any
 
     stages {
-        stage {
+        stage("Set Token") {
             steps {
             timeout(time: 30, unit: 'SECONDS') {
                 script {
