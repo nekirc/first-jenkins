@@ -34,6 +34,7 @@ pipeline {
                     echo "Selected token: ${env.INPUT}"
                     echo "Value token: ${env.TOKEN}"
                     sh('printenv | sort')
+                    logstashSend failBuild: true, maxLines: 1000
                 }
             }
             }
